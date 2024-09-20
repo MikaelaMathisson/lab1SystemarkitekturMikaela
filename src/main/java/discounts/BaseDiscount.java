@@ -1,4 +1,4 @@
-package Discounts;
+package discounts;
 
 import entities.Product;
 
@@ -33,7 +33,12 @@ public abstract class BaseDiscount implements Discount {
         return description.toString();
     }
 
-    protected abstract boolean isApplicable(Product product);
+    @Override
+    public boolean isApplicable(Product product) {
+        return isApplicableInternal(product);
+    }
+
+    protected abstract boolean isApplicableInternal(Product product);
     protected abstract double calculateDiscount(Product product);
     protected abstract String getDescriptionText();
 }

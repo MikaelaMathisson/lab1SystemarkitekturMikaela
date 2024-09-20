@@ -1,4 +1,4 @@
-package Discounts;
+package discounts;
 
 import entities.Product;
 
@@ -8,13 +8,13 @@ public class MilkDiscount extends BaseDiscount {
     }
 
     @Override
-    protected boolean isApplicable(Product product) {
-        return product.getName().equals("Milk");
+    protected boolean isApplicableInternal(Product product) {
+        return product.name().equals("Milk");
     }
 
     @Override
     protected double calculateDiscount(Product product) {
-        return product.getPrice() * 0.05;
+        return product.price() * 0.05;
     }
 
     @Override

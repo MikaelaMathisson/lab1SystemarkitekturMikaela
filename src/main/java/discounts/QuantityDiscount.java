@@ -1,7 +1,5 @@
 package discounts;
 
-import Discounts.BaseDiscount;
-import Discounts.Discount;
 import entities.Product;
 
 public class QuantityDiscount extends BaseDiscount {
@@ -10,13 +8,13 @@ public class QuantityDiscount extends BaseDiscount {
     }
 
     @Override
-    protected boolean isApplicable(Product product) {
-        return product.getQuantity() >= 5;
+    protected boolean isApplicableInternal(Product product) {
+        return product.quantity() >= 5;
     }
 
     @Override
     protected double calculateDiscount(Product product) {
-        return 10.0 * product.getQuantity();
+        return 10.0 * product.quantity();
     }
 
     @Override

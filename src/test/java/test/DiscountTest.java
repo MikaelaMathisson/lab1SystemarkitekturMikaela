@@ -64,3 +64,4 @@ public class DiscountTest {
         assertEquals("10% Friday discount 5% discount on Milk 10 SEK per product if quantity is 5 or more", discount.getDescription(product));
     }
 }
+

@@ -1,0 +1,8 @@
+Main.class
+discounts\GenericDiscount.class
+discounts\QuantityDiscount.class
+discounts\BaseDiscount.class
+discounts\Discount.class
+discounts\FridayDiscount.class
+discounts\MilkDiscount.class
+entities\Product.class
